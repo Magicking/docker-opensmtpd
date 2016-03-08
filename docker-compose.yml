@@ -1,0 +1,17 @@
+version: '2'
+services:
+  smtpd:
+    build: smtpd
+    ports:
+      - "25:25"
+      - "587:587"
+    environment:
+      - user=guillaume
+      - aliases=guillaume.vincent;gv;gvt;vincent;gvincent
+      - password=password123!
+      - domain=oslab.fr
+      - ssl_country_name=FR
+      - ssl_state=Gironde
+      - ssl_city=Bordeaux
+      - ssl_company=Oslab
+      - ssl_department=IT Department
